@@ -32,10 +32,12 @@ jxRequirements:
     provider: minikube
   environments:
   - key: dev
+    owner: vincentkwok2021
+    repository: jenkinx-minikube
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: 192.168.150.137.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
@@ -43,6 +45,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: vincentkwok
   repository: bucketrepo
   secretStorage: local
   vault: {}
